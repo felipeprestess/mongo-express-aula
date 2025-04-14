@@ -20,10 +20,6 @@ app.get('/', (req, res) => {
     res.status(200).send('Curso de NodeJs');
 });
 
-app.get('/livros', async (req, res) => {
-    const listaLivros = await livro.find({});
-    res.status(200).json(listaLivros);
-});
 
 app.get('/livros/:id', async (req, res) => {
     const index = buscaIndexLivro(req.params.id);
